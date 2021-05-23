@@ -23,6 +23,7 @@ const App = () => {
       const res = await fetch(url);
       const resdata = await res.json();
       setImages(resdata.hits);
+      console.log(resdata.hits);
     }else
     {
       setImages([]);
@@ -56,7 +57,7 @@ const App = () => {
           {
             images.map((img,index) => {
               return (
-                < Card key={index} imglink={img.largeImageURL} likes={img.likes} comments={img.comments} downloads={img.downloads}/>
+                < Card key={index} imglink={img.previewURL} largeimg={img.largeImageURL} likes={img.likes} comments={img.comments} downloads={img.downloads}/>
               )
             })
           }

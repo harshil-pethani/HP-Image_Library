@@ -29,7 +29,7 @@ const Card = (props) => {
                         <i className="fas fa-arrow-alt-circle-down"> {props.downloads}</i>
                     </div>
                     <div className="btn">
-                        <i onClick={()=>viewImg(props.imglink)} className="fas fa-search-plus"></i>
+                        <i onClick={()=>viewImg(props.largeimg)} className="fas fa-search-plus"></i>
                     </div>
                 </div>
             </div>
