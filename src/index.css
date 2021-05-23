@@ -1,13 +1,160 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+    background: rgb(180, 170, 235);
+}
+
+.title{
+    text-align: center;
+    font-size: 1.5em;
+    margin: 10px auto;
+}
+
+.mainbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2em;
+}
+
+.mainbox .searchbox{
+    width: 100%;
+}
+
+@media (max-width: 768px)
+{
+}
+
+.mainbox .searchbox input{
+    border: none;
+    background: none;
+    border-bottom: 2px solid black;
+    width: 100%;
+    color: black;
+    outline: none;
+    padding: 10px;
+    font-size: 1em;
+    margin: 1em 0;
+}
+
+.mainbox input::placeholder{
+    color: black;
+    opacity: 1;
+}
+
+.mainbox .selectbox{
+    width: 100%;
+}
+
+.mainbox select{
+    background: none;
+    border: 2px solid black;
+    width: 100%;
+    color: black;
+    outline: none;
+    padding: 10px;
+    font-size: 1em;
+    margin: 1em 0;
+    cursor: pointer;
+}
+
+.images{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+}
+
+
+@media (max-width: 768px)
+{
+    .images{
+        justify-content: center;
+    }
+}
+
+.images .card{
+    height: 200px; 
+    width: 350px;
+    overflow: hidden;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    position: relative;
+}
+
+.images .card img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.images .card .content{
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    display: flex;
+    padding: 5px;
+}
+
+.images .card .content .para{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.images .card .content .btn{
+    height: 100%;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.fullImg{
+    width: 98.9vw;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.fullImg img{
+    height: 400px;
+    width: 600px;
+}
+
+.fullImg i{
+    height: 50px;
+    width: 50px;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+}
+
+
+@media (max-width: 768px)
+{
+    .fullImg img{
+        height: 200px;
+        width: 300px;
+    }
 }
